@@ -1,0 +1,13 @@
+$primary-color: purple;
+$primary-border: 2px solid $primary-color;
+
+@mixin navbar {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  border: $primary-border;
+  text-align: center;
+  justify-content: center;
+  font-size: larger;
+  background-color: $primary-color;
+}

@@ -1,0 +1,24 @@
+h1 {
+  display: grid;
+  grid-area: h;
+  border: 1px solid black;
+  text-align: center;
+  font-family: "Grape Nuts", cursive;
+  font-size: 50px;
+}
+
+.nav-bar li {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  border: 2px solid purple;
+  text-align: center;
+  justify-content: center;
+  font-size: larger;
+  background-color: purple;
+  display: flex;
+  grid-area: n;
+}
+.nav-bar li a {
+  color: azure;
+}

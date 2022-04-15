@@ -1,0 +1,81 @@
+h1 {
+  display: grid;
+  grid-area: h;
+  border: 1px solid black;
+  text-align: center;
+  font-family: "Grape Nuts", cursive;
+  font-size: 50px;
+}
+
+.nav-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding-inline-start: 0px;
+}
+.nav-bar li {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  border: 2px solid purple;
+  text-align: center;
+  justify-content: center;
+  font-size: larger;
+  background-color: purple;
+  font-size: 20px;
+}
+.nav-bar li a {
+  color: azure;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-content: space-between;
+  grid-template-areas: "s i";
+}
+.container--summary {
+  margin: 10px;
+  padding-top: 5px;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid black;
+  align-items: flex-start;
+  grid-area: s;
+  justify-content: center;
+}
+.container .image-home {
+  width: 750px;
+  height: 470px;
+  display: flex;
+  align-items: flex-end;
+  grid-area: i;
+}
+
+.container-extra {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-content: space-between;
+  grid-template-areas: "ie pe";
+}
+.container-extra .image-extra {
+  width: 700px;
+  height: 450px;
+  display: flex;
+  grid-area: ie;
+}
+.container-extra .summary-extra {
+  margin: 10px;
+  padding: 5px;
+  font-size: 20px;
+  display: flex;
+  border: 2px solid black;
+  grid-area: pe;
+}
+.container-extra .summary-extra p {
+  display: flex;
+}
