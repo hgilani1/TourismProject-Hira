@@ -1,0 +1,53 @@
+h1 {
+  display: grid;
+  border: 1px solid black;
+  text-align: center;
+  font-family: "Grape Nuts", cursive;
+  font-size: 50px;
+}
+
+.nav-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding-inline-start: 0px;
+}
+.nav-bar li {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  border: 2px solid purple;
+  text-align: center;
+  justify-content: center;
+  font-size: larger;
+  background-color: purple;
+  font-size: 20px;
+}
+.nav-bar li a {
+  color: azure;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+main > .gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+main > .gallery > img {
+  height: 400px;
+  width: 400px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+main > .gallery > img.hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}

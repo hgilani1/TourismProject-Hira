@@ -1,0 +1,55 @@
+$primary-fontsize: 20px;
+@use "navbar";
+
+h1 {
+  display: grid;
+  // grid-area: h;
+  border: 1px solid black;
+  text-align: center;
+  font-family: "Grape Nuts", cursive;
+  font-size: 50px;
+}
+
+.nav-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding-inline-start: 0px;
+  li {
+    @include navbar.navbar;
+    font-size: $primary-fontsize;
+    a {
+      color: azure;
+    }
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+main > .gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+main > .gallery > img {
+  height: 400px;
+  width: 400px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+main > .gallery > img.hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+// GRADIENT BACKGROUND - add at the end for styling
+// body {
+//   background: linear-gradient(to bottom right, #ff48b6, #ff7e6c);
+// }
