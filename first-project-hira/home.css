@@ -28,6 +28,10 @@ h1 {
   color: azure;
 }
 
+body {
+  margin: auto;
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;

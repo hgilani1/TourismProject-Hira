@@ -31,20 +31,22 @@ body {
   margin: auto;
 }
 
-.image-container {
+.container {
   display: grid;
-  justify-content: space-around;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  border: 2px solid black;
 }
-.image-container img {
-  width: auto;
-  height: 800px;
+.container--info {
+  display: flex;
+  padding: 20px;
+  margin: 0px;
+  border: 5px solid red;
+  flex-direction: column;
 }
 
-.container-explore {
-  display: grid;
-  border: 2px solid black;
-  margin: 5px;
-}
-.container-explore p {
-  margin: 5px;
+iframe {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
 }

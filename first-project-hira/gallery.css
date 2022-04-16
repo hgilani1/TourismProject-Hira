@@ -27,6 +27,10 @@ h1 {
   color: azure;
 }
 
+body {
+  margin: auto;
+}
+
 main {
   display: flex;
   justify-content: center;
