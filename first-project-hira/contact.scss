@@ -1,7 +1,47 @@
-input {
-  caret-color: rgb(0, 255, 98);
+@use "style";
+
+html {
+  @include style.background;
+
+  h1 {
+    @include style.heading;
+  }
+
+  nav {
+    box-shadow: 0 0 5px 0;
+  }
+
+  .nav-bar {
+    @include style.navbar;
+  }
+
+  form {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    .form-format {
+      padding: 5px;
+      display: inline-grid;
+      grid-template-columns: 40%;
+      justify-content: center;
+      justify-items: center;
+      background-color: #ffffff31;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 5px 0;
+      h2 {
+        margin: 0px;
+      }
+      p {
+        text-align: center;
+      }
+    }
+  }
 }
 
-body {
-  margin: auto;
+input {
+  caret-color: brown;
+}
+
+#comment {
+  display: flex;
 }

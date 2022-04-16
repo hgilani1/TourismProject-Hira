@@ -1,85 +1,88 @@
-h1 {
+html {
+  margin: auto;
+  background-image: linear-gradient(to bottom, #a96f44, #bc8e5b, #cead76, #e0cc95, #f2ecb6);
+}
+html h1 {
   display: grid;
   grid-area: h;
-  border: 1px solid black;
   text-align: center;
   font-family: "Grape Nuts", cursive;
   font-size: 50px;
 }
-
-.nav-bar {
+html nav {
+  box-shadow: 0 0 5px 0;
+}
+html .nav-bar {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   padding-inline-start: 0px;
 }
-.nav-bar li {
+html .nav-bar li {
   list-style-type: none;
   margin: 0px;
   padding: 0px;
-  border: 2px solid purple;
   text-align: center;
   justify-content: center;
   font-size: larger;
-  background-color: purple;
   font-size: 20px;
+  margin: 10px;
 }
-.nav-bar li a {
+html .nav-bar li a {
   color: azure;
 }
-
-body {
+html body {
   margin: auto;
 }
-
-.container {
+html .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   justify-content: space-between;
   grid-template-areas: "s i";
 }
-.container--summary {
+html .container--summary {
   margin: 10px;
-  padding-top: 5px;
+  padding: 10px;
   font-size: 20px;
-  text-align: center;
   display: flex;
-  flex-wrap: wrap;
-  border: 2px solid black;
   align-items: flex-start;
   grid-area: s;
   justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1921568627);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 5px 0;
 }
-.container .image-home {
+html .container .image-home {
   width: 750px;
   height: 470px;
   display: flex;
   align-items: flex-end;
   grid-area: i;
 }
-
-.container-extra {
+html .container-extra {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   justify-content: space-between;
   grid-template-areas: "ie pe";
 }
-.container-extra .image-extra {
+html .container-extra .image-extra {
   width: 700px;
   height: 450px;
   display: flex;
   grid-area: ie;
 }
-.container-extra .summary-extra {
+html .container-extra .summary-extra {
   margin: 10px;
-  padding: 5px;
+  padding: 10px;
   font-size: 20px;
   display: flex;
-  border: 2px solid black;
   grid-area: pe;
+  background-color: rgba(255, 255, 255, 0.1921568627);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 5px 0;
 }
-.container-extra .summary-extra p {
+html .container-extra .summary-extra p {
   display: flex;
 }

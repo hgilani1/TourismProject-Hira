@@ -1,7 +1,62 @@
-input {
-  caret-color: rgb(0, 255, 98);
+html {
+  margin: auto;
+  background-image: linear-gradient(to bottom, #a96f44, #bc8e5b, #cead76, #e0cc95, #f2ecb6);
+}
+html h1 {
+  display: grid;
+  grid-area: h;
+  text-align: center;
+  font-family: "Grape Nuts", cursive;
+  font-size: 50px;
+}
+html nav {
+  box-shadow: 0 0 5px 0;
+}
+html .nav-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding-inline-start: 0px;
+}
+html .nav-bar li {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  justify-content: center;
+  font-size: larger;
+  font-size: 20px;
+  margin: 10px;
+}
+html .nav-bar li a {
+  color: azure;
+}
+html form {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+html form .form-format {
+  padding: 5px;
+  display: inline-grid;
+  grid-template-columns: 40%;
+  justify-content: center;
+  justify-items: center;
+  background-color: rgba(255, 255, 255, 0.1921568627);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 5px 0;
+}
+html form .form-format h2 {
+  margin: 0px;
+}
+html form .form-format p {
+  text-align: center;
 }
 
-body {
-  margin: auto;
+input {
+  caret-color: brown;
+}
+
+#comment {
+  display: flex;
 }

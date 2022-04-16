@@ -1,0 +1,54 @@
+$primary-color: purple;
+$primary-border: 2px solid $primary-color;
+$primary-fontsize: 20px;
+
+@mixin navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding-inline-start: 0px;
+  li {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    // border: $primary-border;
+    // border: 2px solid white;
+    // box-shadow: 0 0 5px 0;
+    text-align: center;
+    justify-content: center;
+    font-size: larger;
+    // background-color: $primary-color;
+    font-size: $primary-fontsize;
+    margin: 10px;
+    a {
+      color: azure;
+    }
+  }
+}
+
+@mixin heading {
+  display: grid;
+  grid-area: h;
+  // border: 1px solid black;
+  text-align: center;
+  font-family: "Grape Nuts", cursive;
+  font-size: 50px;
+}
+
+@mixin background {
+  margin: auto;
+  background-image: linear-gradient(
+    to bottom,
+    #a96f44,
+    #bc8e5b,
+    #cead76,
+    #e0cc95,
+    #f2ecb6
+  );
+}
+
+@mixin border-effect {
+  background-color: #ffffff31;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 5px 0;
+}

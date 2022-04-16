@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="contact.css" />
   </head>
   <body>
-    <h1>Let's Explore Paris</h1>
+    <h1>France: Paris</h1>
     <nav>
       <ul class="nav-bar">
         <li>
@@ -29,65 +29,79 @@
       </ul>
     </nav>
     <form action="https://formspree.io/f/mlezpnby" method="POST">
-      <div>
-        <label for="name">Name:</label>
-        <input
-          type="text"
-          id="name"
-          name="fullName"
-          maxlength="10"
-          placeholder="Please enter your name"
-          required
-        />
+      <div class="form-format">
+        <h2>Get in touch!</h2>
+        <p>
+          Please fill out the below form if you would like to get in contact
+          with us or would like to share any feedback or suggestion.
+        </p>
+        <div>
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="fullName"
+            maxlength="14"
+            placeholder="Please enter your name"
+            required
+          />
+        </div>
+        <br />
+        <div>
+          <label for="age">Age:</label>
+          <input
+            type="number"
+            id="age"
+            min="1"
+            max="150"
+            required
+            placeholder="Age"
+          />
+        </div>
+        <br />
+        <div>
+          <label for="type">Type:</label>
+          <select id="type" name="type" required>
+            <!-- hidden attribute - doesn't let us submit the form without actually selecting a value other than default -->
+            <option value="" disabled selected hidden>
+              Please select a value
+            </option>
+            <option value="feedback">Feedback</option>
+            <option value="suggestion">Suggestion</option>
+          </select>
+        </div>
+        <br />
+        <div>
+          <label for="email">Email: </label>
+          <input type="email" id="email" required name="email" />
+        </div>
+        <br />
+        <div>
+          <label for="phone">Phone Number: </label>
+          <input
+            type="tel"
+            id="phone"
+            pattern="[0-9]{10}"
+            placeholder="0111111111"
+          />
+        </div>
+        <br />
+        <div id="comment">
+          <label for="comment">Comment: </label>
+          <textarea
+            placeholder="Add some text here"
+            rows="2"
+            cols="20"
+            required
+          ></textarea>
+        </div>
+        <br />
+        <div>
+          <input type="reset" />
+          <input type="submit" />
+        </div>
       </div>
-      <br />
-      <div>
-        <label for="age">Age:</label>
-        <input
-          type="number"
-          id="age"
-          min="1"
-          max="150"
-          required
-          placeholder="Age"
-        />
-      </div>
-      <br />
-      <div>
-        <label for="type">Type:</label>
-        <select id="type" name="type" required>
-          <!-- hidden attribute - doesn't let us submit the form without actually selecting a value other than default -->
-          <option value="" disabled selected hidden>
-            Please select a value
-          </option>
-          <option value="feedback">Feedback</option>
-          <option value="suggestion">Suggestion</option>
-        </select>
-      </div>
-      <br />
-      <div>
-        <label for="email">Email: </label>
-        <input type="email" id="email" required name="email" />
-      </div>
-      <br />
-      <br />
-      <label for="phone">Phone Number: </label>
-      <input
-        type="tel"
-        id="phone"
-        pattern="[0-9]{10}"
-        placeholder="0111111111"
-      />
-      <br />
-      <textarea
-        placeholder="Add some text here"
-        rows="5"
-        cols="20"
-        required
-      ></textarea>
-      <br />
-      <input type="reset" />
-      <input type="submit" />
     </form>
   </body>
+  <footer><p>footer</p></footer>
 </html>

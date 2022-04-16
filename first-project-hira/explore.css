@@ -1,50 +1,62 @@
-h1 {
+html {
+  margin: auto;
+  background-image: linear-gradient(to bottom, #a96f44, #bc8e5b, #cead76, #e0cc95, #f2ecb6);
+}
+html h1 {
   display: grid;
-  border: 1px solid black;
+  grid-area: h;
   text-align: center;
   font-family: "Grape Nuts", cursive;
   font-size: 50px;
 }
-
-.nav-bar {
+html nav {
+  box-shadow: 0 0 5px 0;
+}
+html h2 {
+  display: grid;
+  grid-area: h;
+  text-align: center;
+  font-family: "Grape Nuts", cursive;
+  font-size: 50px;
+  font-size: 30px;
+}
+html .nav-bar {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   padding-inline-start: 0px;
 }
-.nav-bar li {
+html .nav-bar li {
   list-style-type: none;
   margin: 0px;
   padding: 0px;
-  border: 2px solid purple;
   text-align: center;
   justify-content: center;
   font-size: larger;
-  background-color: purple;
   font-size: 20px;
+  margin: 10px;
 }
-.nav-bar li a {
+html .nav-bar li a {
   color: azure;
 }
-
-body {
+html body {
   margin: auto;
 }
-
-.image-container {
+html .image-container {
   display: grid;
   justify-content: space-around;
 }
-.image-container img {
+html .image-container img {
   width: auto;
   height: 800px;
 }
-
-.container-explore {
+html .container-explore {
   display: grid;
-  border: 2px solid black;
-  margin: 5px;
+  margin: 20px;
+  background-color: rgba(255, 255, 255, 0.1921568627);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 5px 0;
 }
-.container-explore p {
+html .container-explore p {
   margin: 5px;
 }
