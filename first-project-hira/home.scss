@@ -34,9 +34,6 @@ html {
       justify-content: space-between;
       flex-wrap: wrap;
       justify-content: center;
-      // grid-template-areas:
-      //   "s i"
-      //   "ie pe";
 
       .summary {
         margin: 10px;
@@ -48,30 +45,28 @@ html {
         justify-content: center;
         @include style.border-effect;
       }
+
       .image1 {
-        // width: 650px;
-        // height: 400px;
         display: flex;
         align-items: flex-end;
         grid-area: i;
         @include style.image-border;
       }
+
       .image2 {
-        // width: 700px;
-        // height: 450px;
-        // display: flex;
         display: flex;
         grid-area: ie;
         @include style.image-border;
       }
+
       .summaryextra {
         margin: 10px;
         padding: 10px;
         font-size: $primary-fontsize;
         display: flex;
-        // border: 2px solid black;
         grid-area: pe;
         @include style.border-effect;
+
         p {
           display: flex;
         }
@@ -79,11 +74,12 @@ html {
 
       // phone
       @media only screen and (max-width: $xs) {
-        // grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
+
         p {
           font-size: 12px;
         }
+
         img {
           width: 90vw;
           height: 90vw;
@@ -93,9 +89,11 @@ html {
       //tablet
       @media only screen and (min-width: ($xs + 1px)) and (max-width: $sm) {
         grid-template-columns: 1fr 1fr;
+
         p {
           font-size: 16px;
         }
+
         img {
           width: 45vw;
           height: 45vw;
@@ -105,9 +103,11 @@ html {
       //tablet landscape
       @media only screen and (min-width: ($sm + 1px)) and (max-width: $md) {
         grid-template-columns: 1fr 1fr;
+
         p {
           font-size: 16px;
         }
+
         img {
           width: 45vw;
           height: 45vw;
@@ -117,9 +117,11 @@ html {
       //laptop
       @media only screen and (min-width: ($md + 1px)) and (max-width: $lg) {
         grid-template-columns: 1fr 1fr 1fr;
+
         p {
           font-size: 18px;
         }
+
         img {
           width: 30vw;
           height: 45vw;

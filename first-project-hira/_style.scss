@@ -11,14 +11,8 @@ $primary-fontsize: 20px;
     list-style-type: none;
     margin: 0px;
     padding: 0px;
-    // border: $primary-border;
-    // border: 2px solid white;
-    // box-shadow: 0 0 5px 0;
     text-align: center;
     justify-content: center;
-    // font-size: larger;
-    // background-color: $primary-color;
-    // font-size: $primary-fontsize;
     margin: 10px;
     a {
       color: azure;
@@ -29,7 +23,6 @@ $primary-fontsize: 20px;
 @mixin heading {
   display: grid;
   grid-area: h;
-  // border: 1px solid black;
   text-align: center;
   font-family: "Grape Nuts", cursive;
   font-size: 50px;
@@ -43,14 +36,12 @@ $primary-fontsize: 20px;
 
 @mixin border-effect {
   background-color: #ffffff31;
-  // background-color: #ffffffbb;
+
   backdrop-filter: blur(12px);
   box-shadow: 0 0 5px 0;
 }
 
 @mixin image-border {
-  // width: 700px;
-  // height: 450px;
   display: flex;
   margin: 10px;
   padding: 10px;
@@ -58,12 +49,3 @@ $primary-fontsize: 20px;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
-
-// @mixin button-effect {
-//   display: inline-block;
-//   color: #fff;
-//   text-decoration: none;
-//   padding: 5px 10px;
-//   border: 3px solid #3c67e3;
-//   border-radius: 10px;
-// }

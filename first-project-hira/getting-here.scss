@@ -29,23 +29,10 @@ html {
     font-size: 30px;
   }
 
-  // body {
-  // margin: auto;
-  // @include media.phone {
-  // }
-  // @include media.tablet {
-  // }
-  // @include media.tablet-landscape {
-  // }
-  // @include media.laptop {
-  // }
-  // }
-
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    // border: 2px solid black;
 
     img {
       @include style.image-border;
@@ -57,7 +44,6 @@ html {
       padding: 10px;
       margin: 10px;
       text-align: center;
-      // border: 5px solid red;
       flex-direction: column;
 
       ul {
@@ -130,11 +116,9 @@ html {
     }
 
     .map {
-      // @include style.border-effect;
       margin: 15px;
       display: flex;
       justify-content: center;
-      // margin: auto;
     }
   }
 }

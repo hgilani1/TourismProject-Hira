@@ -75,12 +75,8 @@ html {
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
         cursor: pointer;
       }
-
-      // GRADIENT BACKGROUND - add at the end for styling
-      // body {
-      //   background: linear-gradient(to bottom right, #ff48b6, #ff7e6c);
-      // }
     }
+
     // phone
     @media only screen and (max-width: $xs) {
       grid-template-columns: 1fr;

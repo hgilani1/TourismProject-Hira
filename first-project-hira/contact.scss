@@ -48,7 +48,6 @@ html {
 
     // phone
     @media only screen and (max-width: $xs) {
-      // grid-template-columns: 1fr;
       img {
         width: 30vw;
         height: 50vw;
@@ -61,7 +60,6 @@ html {
 
     //tablet
     @media only screen and (min-width: ($xs + 1px)) and (max-width: $sm) {
-      // grid-template-columns: 1fr 1fr ;
       img {
         width: 45vw;
         height: 45vw;
@@ -74,7 +72,6 @@ html {
 
     //tablet landscape
     @media only screen and (min-width: ($sm + 1px)) and (max-width: $md) {
-      // grid-template-columns: 1fr 1fr;
       img {
         width: 45vw;
         height: 45vw;
@@ -87,7 +84,6 @@ html {
 
     //laptop
     @media only screen and (min-width: ($md + 1px)) and (max-width: $lg) {
-      // grid-template-columns: 1fr 1fr 1fr;
       img {
         width: 30vw;
         height: 45vw;
