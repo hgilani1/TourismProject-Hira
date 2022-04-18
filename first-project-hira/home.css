@@ -1,47 +1,47 @@
 html {
   margin: auto;
-  background-image: linear-gradient(to bottom, #a96f44, #bc8e5b, #cead76, #e0cc95, #f2ecb6);
+  background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+  background-repeat: no-repeat;
 }
-html h1 {
+html body {
+  margin: auto;
+}
+html body h1 {
   display: grid;
   grid-area: h;
   text-align: center;
   font-family: "Grape Nuts", cursive;
   font-size: 50px;
 }
-html nav {
+html body nav {
   box-shadow: 0 0 5px 0;
 }
-html .nav-bar {
+html body nav .nav-bar {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   padding-inline-start: 0px;
 }
-html .nav-bar li {
+html body nav .nav-bar li {
   list-style-type: none;
   margin: 0px;
   padding: 0px;
   text-align: center;
   justify-content: center;
-  font-size: larger;
-  font-size: 20px;
   margin: 10px;
 }
-html .nav-bar li a {
+html body nav .nav-bar li a {
   color: azure;
 }
-html body {
-  margin: auto;
-}
-html .container {
-  display: grid;
+html body .container {
+  display: flex;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   justify-content: space-between;
-  grid-template-areas: "s i";
+  flex-wrap: wrap;
+  justify-content: center;
 }
-html .container--summary {
+html body .container .summary {
   margin: 10px;
   padding: 10px;
   font-size: 20px;
@@ -53,27 +53,28 @@ html .container--summary {
   backdrop-filter: blur(12px);
   box-shadow: 0 0 5px 0;
 }
-html .container .image-home {
-  width: 750px;
-  height: 470px;
+html body .container .image1 {
   display: flex;
   align-items: flex-end;
   grid-area: i;
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
-html .container-extra {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  justify-content: space-between;
-  grid-template-areas: "ie pe";
-}
-html .container-extra .image-extra {
-  width: 700px;
-  height: 450px;
+html body .container .image2 {
   display: flex;
   grid-area: ie;
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
-html .container-extra .summary-extra {
+html body .container .summaryextra {
   margin: 10px;
   padding: 10px;
   font-size: 20px;
@@ -83,6 +84,54 @@ html .container-extra .summary-extra {
   backdrop-filter: blur(12px);
   box-shadow: 0 0 5px 0;
 }
-html .container-extra .summary-extra p {
+html body .container .summaryextra p {
   display: flex;
+}
+@media only screen and (max-width: 576px) {
+  html body .container {
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+  html body .container p {
+    font-size: 12px;
+  }
+  html body .container img {
+    width: 90vw;
+    height: 90vw;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  html body .container {
+    grid-template-columns: 1fr 1fr;
+  }
+  html body .container p {
+    font-size: 16px;
+  }
+  html body .container img {
+    width: 45vw;
+    height: 45vw;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  html body .container {
+    grid-template-columns: 1fr 1fr;
+  }
+  html body .container p {
+    font-size: 16px;
+  }
+  html body .container img {
+    width: 45vw;
+    height: 45vw;
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  html body .container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  html body .container p {
+    font-size: 18px;
+  }
+  html body .container img {
+    width: 30vw;
+    height: 45vw;
+  }
 }

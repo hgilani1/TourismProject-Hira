@@ -1,5 +1,5 @@
-$primary-color: purple;
-$primary-border: 2px solid $primary-color;
+// $primary-color: purple;
+// $primary-border: 2px solid $primary-color;
 $primary-fontsize: 20px;
 
 @mixin navbar {
@@ -16,9 +16,9 @@ $primary-fontsize: 20px;
     // box-shadow: 0 0 5px 0;
     text-align: center;
     justify-content: center;
-    font-size: larger;
+    // font-size: larger;
     // background-color: $primary-color;
-    font-size: $primary-fontsize;
+    // font-size: $primary-fontsize;
     margin: 10px;
     a {
       color: azure;
@@ -37,18 +37,33 @@ $primary-fontsize: 20px;
 
 @mixin background {
   margin: auto;
-  background-image: linear-gradient(
-    to bottom,
-    #a96f44,
-    #bc8e5b,
-    #cead76,
-    #e0cc95,
-    #f2ecb6
-  );
+  background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+  background-repeat: no-repeat;
 }
 
 @mixin border-effect {
   background-color: #ffffff31;
+  // background-color: #ffffffbb;
   backdrop-filter: blur(12px);
   box-shadow: 0 0 5px 0;
 }
+
+@mixin image-border {
+  // width: 700px;
+  // height: 450px;
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+// @mixin button-effect {
+//   display: inline-block;
+//   color: #fff;
+//   text-decoration: none;
+//   padding: 5px 10px;
+//   border: 3px solid #3c67e3;
+//   border-radius: 10px;
+// }

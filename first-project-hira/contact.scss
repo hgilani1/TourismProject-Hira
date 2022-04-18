@@ -1,4 +1,11 @@
+$xs: 576px; // Extra small
+$sm: 768px; // Small
+$md: 992px; // Medium
+$lg: 1200px; // Large
+$xl: 1400px; // Extra Large
+
 @use "style";
+@use "media";
 
 html {
   @include style.background;
@@ -15,6 +22,11 @@ html {
     @include style.navbar;
   }
 
+  h2 {
+    @include style.heading;
+    font-size: 30px;
+  }
+
   form {
     display: grid;
     justify-content: center;
@@ -28,18 +40,69 @@ html {
       background-color: #ffffff31;
       backdrop-filter: blur(12px);
       box-shadow: 0 0 5px 0;
-      h2 {
-        margin: 0px;
-      }
+
       p {
         text-align: center;
+      }
+    }
+
+    // phone
+    @media only screen and (max-width: $xs) {
+      // grid-template-columns: 1fr;
+      img {
+        width: 30vw;
+        height: 50vw;
+      }
+      iframe {
+        width: 30vw;
+        margin: 15px;
+      }
+    }
+
+    //tablet
+    @media only screen and (min-width: ($xs + 1px)) and (max-width: $sm) {
+      // grid-template-columns: 1fr 1fr ;
+      img {
+        width: 45vw;
+        height: 45vw;
+      }
+      iframe {
+        width: 45vw;
+        margin: 15px;
+      }
+    }
+
+    //tablet landscape
+    @media only screen and (min-width: ($sm + 1px)) and (max-width: $md) {
+      // grid-template-columns: 1fr 1fr;
+      img {
+        width: 45vw;
+        height: 45vw;
+      }
+      iframe {
+        width: 45vw;
+        margin: 15px;
+      }
+    }
+
+    //laptop
+    @media only screen and (min-width: ($md + 1px)) and (max-width: $lg) {
+      // grid-template-columns: 1fr 1fr 1fr;
+      img {
+        width: 30vw;
+        height: 45vw;
+      }
+      iframe {
+        width: 30vw;
+        margin: 15px;
       }
     }
   }
 }
 
 input {
-  caret-color: brown;
+  caret-color: blue;
+  color: blue;
 }
 
 #comment {

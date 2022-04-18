@@ -1,6 +1,7 @@
 html {
   margin: auto;
-  background-image: linear-gradient(to bottom, #a96f44, #bc8e5b, #cead76, #e0cc95, #f2ecb6);
+  background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+  background-repeat: no-repeat;
 }
 html h1 {
   display: grid;
@@ -24,12 +25,18 @@ html .nav-bar li {
   padding: 0px;
   text-align: center;
   justify-content: center;
-  font-size: larger;
-  font-size: 20px;
   margin: 10px;
 }
 html .nav-bar li a {
   color: azure;
+}
+html h2 {
+  display: grid;
+  grid-area: h;
+  text-align: center;
+  font-family: "Grape Nuts", cursive;
+  font-size: 50px;
+  font-size: 30px;
 }
 html form {
   display: grid;
@@ -46,15 +53,53 @@ html form .form-format {
   backdrop-filter: blur(12px);
   box-shadow: 0 0 5px 0;
 }
-html form .form-format h2 {
-  margin: 0px;
-}
 html form .form-format p {
   text-align: center;
 }
+@media only screen and (max-width: 576px) {
+  html form img {
+    width: 30vw;
+    height: 50vw;
+  }
+  html form iframe {
+    width: 30vw;
+    margin: 15px;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  html form img {
+    width: 45vw;
+    height: 45vw;
+  }
+  html form iframe {
+    width: 45vw;
+    margin: 15px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  html form img {
+    width: 45vw;
+    height: 45vw;
+  }
+  html form iframe {
+    width: 45vw;
+    margin: 15px;
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  html form img {
+    width: 30vw;
+    height: 45vw;
+  }
+  html form iframe {
+    width: 30vw;
+    margin: 15px;
+  }
+}
 
 input {
-  caret-color: brown;
+  caret-color: blue;
+  color: blue;
 }
 
 #comment {

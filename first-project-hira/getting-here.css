@@ -1,6 +1,7 @@
 html {
   margin: auto;
-  background-image: linear-gradient(to bottom, #a96f44, #bc8e5b, #cead76, #e0cc95, #f2ecb6);
+  background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+  background-repeat: no-repeat;
 }
 html h1 {
   display: grid;
@@ -24,8 +25,6 @@ html .nav-bar li {
   padding: 0px;
   text-align: center;
   justify-content: center;
-  font-size: larger;
-  font-size: 20px;
   margin: 10px;
 }
 html .nav-bar li a {
@@ -39,22 +38,98 @@ html h2 {
   font-size: 50px;
   font-size: 30px;
 }
-html body {
-  margin: auto;
-}
 html .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
 }
-html .container--info {
+html .container img {
   display: flex;
-  padding: 20px;
-  margin: 0px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+html .container--info {
+  background-color: rgba(255, 255, 255, 0.1921568627);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 5px 0;
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
   flex-direction: column;
 }
-html iframe {
+html .container--info ul {
+  text-align: left;
+}
+@media only screen and (max-width: 576px) {
+  html .container {
+    grid-template-columns: 1fr;
+  }
+  html .container a {
+    font-size: 12px;
+  }
+  html .container img {
+    width: 90vw;
+    height: 90vw;
+  }
+  html .container iframe {
+    width: 90vw;
+    margin: 15px;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  html .container {
+    grid-template-columns: 1fr 1fr;
+  }
+  html .container a {
+    font-size: 16px;
+  }
+  html .container img {
+    width: 45vw;
+    height: 45vw;
+  }
+  html .container iframe {
+    width: 45vw;
+    margin: 15px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  html .container {
+    grid-template-columns: 1fr 1fr;
+  }
+  html .container a {
+    font-size: 16px;
+  }
+  html .container img {
+    width: 45vw;
+    height: 45vw;
+  }
+  html .container iframe {
+    width: 45vw;
+    margin: 15px;
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  html .container {
+    grid-template-columns: 1fr 1fr;
+  }
+  html .container a {
+    font-size: 20px;
+  }
+  html .container img {
+    width: 50vw;
+    height: 45vw;
+  }
+  html .container iframe {
+    width: 50vw;
+    margin: 15px;
+  }
+}
+html .container .map {
+  margin: 15px;
   display: flex;
-  justify-content: space-around;
-  margin: auto;
+  justify-content: center;
 }

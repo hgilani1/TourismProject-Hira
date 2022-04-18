@@ -1,6 +1,7 @@
 html {
   margin: auto;
-  background-image: linear-gradient(to bottom, #a96f44, #bc8e5b, #cead76, #e0cc95, #f2ecb6);
+  background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+  background-repeat: no-repeat;
 }
 html h1 {
   display: grid;
@@ -24,8 +25,6 @@ html .nav-bar li {
   padding: 0px;
   text-align: center;
   justify-content: center;
-  font-size: larger;
-  font-size: 20px;
   margin: 10px;
 }
 html .nav-bar li a {
@@ -39,6 +38,26 @@ html h2 {
   font-size: 50px;
   font-size: 30px;
 }
+@media only screen and (max-width: 576px) {
+  html h2 {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  html h2 {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  html h2 {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 993px) {
+  html h2 {
+    font-size: 30px;
+  }
+}
 html body {
   margin: auto;
 }
@@ -46,12 +65,12 @@ html main {
   display: flex;
   justify-content: center;
 }
-html main > .gallery {
+html .gallery {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
 }
-html main > .gallery > img {
+html .gallery img {
   height: 400px;
   width: 400px;
   padding: 10px;
@@ -59,7 +78,39 @@ html main > .gallery > img {
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
-html main > .gallery > img.hover {
+html .gallery img img:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
+}
+@media only screen and (max-width: 576px) {
+  html .gallery {
+    grid-template-columns: 1fr;
+  }
+  html .gallery img {
+    width: 90vw;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  html .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+  html .gallery img {
+    width: 45vw;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  html .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+  html .gallery img {
+    width: 45vw;
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  html .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  html .gallery img {
+    width: 30vw;
+  }
 }

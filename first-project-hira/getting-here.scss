@@ -1,5 +1,12 @@
 $primary-fontsize: 20px;
+$xs: 576px; // Extra small
+$sm: 768px; // Small
+$md: 992px; // Medium
+$lg: 1200px; // Large
+$xl: 1400px; // Extra Large
+
 @use "style";
+@use "media";
 
 html {
   @include style.background;
@@ -14,6 +21,7 @@ html {
 
   .nav-bar {
     @include style.navbar;
+    @include media.phone;
   }
 
   h2 {
@@ -21,27 +29,112 @@ html {
     font-size: 30px;
   }
 
-  body {
-    margin: auto;
-  }
+  // body {
+  // margin: auto;
+  // @include media.phone {
+  // }
+  // @include media.tablet {
+  // }
+  // @include media.tablet-landscape {
+  // }
+  // @include media.laptop {
+  // }
+  // }
+
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     // border: 2px solid black;
 
+    img {
+      @include style.image-border;
+    }
+
     &--info {
+      @include style.border-effect;
       display: flex;
-      padding: 20px;
-      margin: 0px;
+      padding: 10px;
+      margin: 10px;
+      text-align: center;
       // border: 5px solid red;
       flex-direction: column;
-    }
-  }
 
-  iframe {
-    display: flex;
-    justify-content: space-around;
-    margin: auto;
+      ul {
+        text-align: left;
+      }
+    }
+
+    // phone
+    @media only screen and (max-width: $xs) {
+      grid-template-columns: 1fr;
+      a {
+        font-size: 12px;
+      }
+      img {
+        width: 90vw;
+        height: 90vw;
+      }
+      iframe {
+        width: 90vw;
+        margin: 15px;
+      }
+    }
+
+    //tablet
+    @media only screen and (min-width: ($xs + 1px)) and (max-width: $sm) {
+      grid-template-columns: 1fr 1fr;
+      a {
+        font-size: 16px;
+      }
+      img {
+        width: 45vw;
+        height: 45vw;
+      }
+      iframe {
+        width: 45vw;
+        margin: 15px;
+      }
+    }
+
+    //tablet landscape
+    @media only screen and (min-width: ($sm + 1px)) and (max-width: $md) {
+      grid-template-columns: 1fr 1fr;
+      a {
+        font-size: 16px;
+      }
+      img {
+        width: 45vw;
+        height: 45vw;
+      }
+      iframe {
+        width: 45vw;
+        margin: 15px;
+      }
+    }
+
+    //laptop
+    @media only screen and (min-width: ($md + 1px)) and (max-width: $lg) {
+      grid-template-columns: 1fr 1fr;
+      a {
+        font-size: 20px;
+      }
+      img {
+        width: 50vw;
+        height: 45vw;
+      }
+      iframe {
+        width: 50vw;
+        margin: 15px;
+      }
+    }
+
+    .map {
+      // @include style.border-effect;
+      margin: 15px;
+      display: flex;
+      justify-content: center;
+      // margin: auto;
+    }
   }
 }

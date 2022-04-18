@@ -1,46 +1,106 @@
 $primary-fontsize: 20px;
+$xs: 576px; // Extra small
+$sm: 768px; // Small
+$md: 992px; // Medium
+$lg: 1200px; // Large
+$xl: 1400px; // Extra Large
+
 @use "style";
+@use "media";
 
 html {
   @include style.background;
 
-  h1 {
-    @include style.heading;
-  }
-
-  nav {
-    box-shadow: 0 0 5px 0;
-  }
-
-  h2 {
-    @include style.heading;
-    font-size: 30px;
-  }
-
-  .nav-bar {
-    @include style.navbar;
-  }
-
   body {
     margin: auto;
-  }
 
-  .image-container {
-    display: grid;
-    justify-content: space-around;
-    img {
-      width: auto;
-      height: 800px;
+    h1 {
+      @include style.heading;
     }
-  }
 
-  .container-explore {
-    display: grid;
-    // border: 2px solid black;
-    margin: 20px;
-    @include style.border-effect;
-    p {
-      margin: 5px;
+    nav {
+      box-shadow: 0 0 5px 0;
+      // @include media.phone;
+      .nav-bar {
+        @include style.navbar;
+        // width: 90vw;
+        ul {
+          width: 100%;
+        }
+      }
+    }
+
+    h2 {
+      @include style.heading;
+      font-size: 30px;
+    }
+    .container {
+      display: grid;
+
+      .image-container {
+        display: grid;
+        justify-content: center;
+        // @include style.image-border
+        // height: 450px;
+        // height: 800px;
+        //     @include media.phone;
+        // @include media.tablet {
+        // }
+        // @include media.tablet-landscape {
+        // }
+        // @include media.laptop {
+        // }
+      }
+    }
+
+    .container-explore {
+      display: grid;
+      // border: 2px solid black;
+      margin: 20px;
+      @include style.border-effect;
+      p {
+        margin: 5px;
+      }
+    }
+
+    // phone
+    @media only screen and (max-width: $xs) {
+      // grid-template-columns: 1fr;
+      img {
+        width: 90vw;
+        height: 90vw;
+        @include style.image-border;
+      }
+    }
+
+    //tablet
+    @media only screen and (min-width: ($xs + 1px)) and (max-width: $sm) {
+      // grid-template-columns: 1fr 1fr ;
+      img {
+        width: 45vw;
+        height: 45vw;
+        @include style.image-border;
+      }
+    }
+
+    //tablet landscape
+    @media only screen and (min-width: ($sm + 1px)) and (max-width: $md) {
+      // grid-template-columns: 1fr 1fr;
+      img {
+        width: 45vw;
+        height: 45vw;
+        @include style.image-border;
+      }
+    }
+
+    //laptop
+    @media only screen and (min-width: ($md + 1px)) and (max-width: $lg) {
+      // grid-template-columns: 1fr 1fr 1fr;
+      img {
+        width: 50vw;
+        height: 45vw;
+        @include style.image-border;
+      }
     }
   }
 }

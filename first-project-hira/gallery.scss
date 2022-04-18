@@ -1,4 +1,11 @@
+$xs: 576px; // Extra small
+$sm: 768px; // Small
+$md: 992px; // Medium
+$lg: 1200px; // Large
+$xl: 1400px; // Extra Large
+
 @use "style";
+@use "media";
 
 html {
   @include style.background;
@@ -17,10 +24,33 @@ html {
   h2 {
     @include style.heading;
     font-size: 30px;
+    @include media.phone {
+      font-size: 18px;
+    }
+    @include media.tablet {
+      font-size: 20px;
+    }
+    @include media.tablet-landscape {
+      font-size: 24px;
+    }
+    @include media.laptop {
+      font-size: 30px;
+    }
   }
 
   body {
     margin: auto;
+    @include media.phone {
+    }
+
+    @include media.tablet {
+    }
+
+    @include media.tablet-landscape {
+    }
+
+    @include media.laptop {
+    }
   }
 
   main {
@@ -28,28 +58,59 @@ html {
     justify-content: center;
   }
 
-  main > .gallery {
+  .gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
-  }
 
-  main > .gallery > img {
-    height: 400px;
-    width: 400px;
-    padding: 10px;
-    border: 1px solid white;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  }
+    img {
+      height: 400px;
+      width: 400px;
+      padding: 10px;
+      border: 1px solid white;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
-  main > .gallery > img.hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-  }
+      img:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+      }
 
-  // GRADIENT BACKGROUND - add at the end for styling
-  // body {
-  //   background: linear-gradient(to bottom right, #ff48b6, #ff7e6c);
-  // }
+      // GRADIENT BACKGROUND - add at the end for styling
+      // body {
+      //   background: linear-gradient(to bottom right, #ff48b6, #ff7e6c);
+      // }
+    }
+    // phone
+    @media only screen and (max-width: $xs) {
+      grid-template-columns: 1fr;
+      img {
+        width: 90vw;
+      }
+    }
+
+    //tablet
+    @media only screen and (min-width: ($xs + 1px)) and (max-width: $sm) {
+      grid-template-columns: 1fr 1fr;
+      img {
+        width: 45vw;
+      }
+    }
+
+    //tablet landscape
+    @media only screen and (min-width: ($sm + 1px)) and (max-width: $md) {
+      grid-template-columns: 1fr 1fr;
+      img {
+        width: 45vw;
+      }
+    }
+
+    //laptop
+    @media only screen and (min-width: ($md + 1px)) and (max-width: $lg) {
+      grid-template-columns: 1fr 1fr 1fr;
+      img {
+        width: 30vw;
+      }
+    }
+  }
 }
